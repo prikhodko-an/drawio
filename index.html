@@ -1,7 +1,7 @@
 <html>
   <head>
     <script>
-      document.onload = () => {
+      (function () {
         const urlSearchParams = window.location.search;
         const newUrl = new URL(
           "/drawio/src/main/webapp/index.html",
@@ -9,7 +9,7 @@
         );
         newUrl.search = urlSearchParams;
         window.location = newUrl.toString();
-      };
+      })();
     </script>
   </head>
 </html>

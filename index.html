@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script>
+      document.onload = () => {
+        const urlSearchParams = window.location.search;
+        const newUrl = new URL(
+          "/src/main/webapp/index.html",
+          window.location.origin
+        );
+        newUrl.search = urlSearchParams;
+        window.location = newUrl.toString();
+      };
+    </script>
+  </head>
+</html>
